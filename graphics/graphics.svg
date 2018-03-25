@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.53142091"
-     inkscape:cx="-251.32862"
-     inkscape:cy="3988.0203"
+     inkscape:zoom="6.0123413"
+     inkscape:cx="480.50916"
+     inkscape:cy="3970.7892"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -71,14 +71,11 @@
        r="1.0482194"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.52517796;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.32593822;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 118.77544,-760.65389 v 0.36159 7.88968 0.36161 h 0.2942 3e-4 0.42721 0.30381 0.2942 v -0.36161 -7.88968 -0.36159 h -0.2942 -0.30381 -0.42721 -3e-4 z"
        id="rect828"
-       width="2.1997905"
-       height="11.693041"
-       x="123.92447"
-       y="-761.44592"
-       ry="0.49064866"
+       inkscape:connector-curvature="0"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
