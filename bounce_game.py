@@ -53,9 +53,9 @@ class Paddle:
         game.display.update()
 
     def move(self, key_pressed):
-        if key_pressed == game.K_UP:
+        if key_pressed == game.K_w:
             self.rectangle.centery -= 2
-        elif key_pressed == game.K_DOWN:
+        elif key_pressed == game.K_s:
             self.rectangle.centery += 2
 
 
@@ -107,7 +107,7 @@ while True:
             game.quit()
             raise SystemExit
 
-        elif event.type == game.KEYDOWN:      # testing to understand how to accept keyboard input from user
+        elif event.type == game.KEYDOWN:
             left_paddle.move(event.key)
 
         update_display(board, ball, left_paddle, right_paddle)
