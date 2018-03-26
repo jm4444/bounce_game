@@ -17,7 +17,6 @@ import sys, pygame as game, get_image_size
 game.init()
 
 graphics_path = "graphics/"
-player_input = game.key.get_pressed()
 fps_clock = game.time.Clock()
 
 
@@ -49,10 +48,16 @@ class Paddle:
             self.rectangle.centerx = board.size[0] - 30
         self.rectangle.centery = board.size[1] / 2
 
-
     def display(self):
         board.screen.blit(self.paddle, self.rectangle)
         game.display.update()
+
+    def move(self, key_pressed):
+        if key_pressed == game.K_UP:
+            self.rectangle.centery -= 2
+        elif key_pressed == game.K_DOWN:
+            self.rectangle.centery += 2
+
 
 # the Ball class is used to create and control the ball
 class Ball:
@@ -69,16 +74,23 @@ class Ball:
 
 
 
+#   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
+
+def update_display(board, ball, left_paddle, right_paddle):
+    board.display()
+    ball.display()
+    right_paddle.display()
+    left_paddle.display()
+
+
+
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
 
 board = Board("background.png")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
-board.display()
-ball.display()
-right_paddle.display()
-left_paddle.display()
+update_display(board, ball, left_paddle, right_paddle)
 
 
 
@@ -96,5 +108,6 @@ while True:
             raise SystemExit
 
         elif event.type == game.KEYDOWN:      # testing to understand how to accept keyboard input from user
-            if event.key == game.K_LEFT:
-                print("Left")
+            left_paddle.move(event.key)
+
+        update_display(board, ball, left_paddle, right_paddle)
