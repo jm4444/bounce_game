@@ -54,9 +54,9 @@ class Paddle:
         game.display.update()
 
     def move(self, key_input):
-        if key_input[game.K_w]:
+        if key_input[game.K_w] and self.rectangle.top >= 0:
             self.rectangle.centery -= 6
-        elif key_input[game.K_s]:
+        elif key_input[game.K_s] and self.rectangle.bottom <= board.size[1]:
             self.rectangle.centery += 6
 
 
