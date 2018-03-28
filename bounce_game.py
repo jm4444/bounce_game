@@ -6,6 +6,7 @@ _  __  ___b o u n c e___  __  _
 by Justin Meredith.
 project started March 16th, 2018.
 
+
 """
 
 
@@ -52,11 +53,11 @@ class Paddle:
         board.screen.blit(self.paddle, self.rectangle)
         game.display.update()
 
-    def move(self, key_pressed):
-        if key_pressed == game.K_w:
-            self.rectangle.centery -= 2
-        elif key_pressed == game.K_s:
-            self.rectangle.centery += 2
+    def move(self, key_input):
+        if key_input[game.K_w]:
+            self.rectangle.centery -= 6
+        elif key_input[game.K_s]:
+            self.rectangle.centery += 6
 
 
 # the Ball class is used to create and control the ball
@@ -79,8 +80,8 @@ class Ball:
 def update_display(board, ball, left_paddle, right_paddle):
     board.display()
     ball.display()
-    right_paddle.display()
     left_paddle.display()
+    right_paddle.display()
 
 
 
@@ -97,17 +98,21 @@ update_display(board, ball, left_paddle, right_paddle)
 #   ~   ~   ~   ~   RUNNING THE GAME   ~   ~   ~   ~   ~#
 
 while True:
-    fps_clock.tick(30)      # sets the frame rate at 30fps
-    game.event.pump()
 
+    #//// Check for Specific Events
     for event in game.event.get():
-
         if event.type == game.QUIT:      # allows the player to exit the game by clicking the exit 'X' on the window
-            print("See ya later!")
+            print("program ends")
             game.quit()
             raise SystemExit
 
-        elif event.type == game.KEYDOWN:
-            left_paddle.move(event.key)
+    #//// Variables for Running the Game
+    fps_clock.tick(30)      # sets the frame rate at 30fps
+    game.event.pump()
+    key_input = game.key.get_pressed()
 
-        update_display(board, ball, left_paddle, right_paddle)
+    #//// Moving Objects
+    if key_input[game.K_w] or key_input[game.K_s]:
+        left_paddle.move(key_input)
+
+    update_display(board, ball, left_paddle, right_paddle)
