@@ -45,8 +45,12 @@ class Paddle:
         self.rectangle = self.paddle.get_rect()
         if side_of_screen == "left":
             self.rectangle.centerx = 30
+            self.up = game.K_w
+            self.down = game.K_s
         elif side_of_screen == "right":
             self.rectangle.centerx = board.size[0] - 30
+            self.up = game.K_UP
+            self.down = game.K_DOWN
         self.rectangle.centery = board.size[1] / 2
 
     def display(self):
@@ -54,9 +58,9 @@ class Paddle:
         game.display.update()
 
     def move(self, key_input):
-        if key_input[game.K_w] and self.rectangle.top >= 0:
+        if key_input[self.up] and self.rectangle.top >= 0:
             self.rectangle.centery -= 6
-        elif key_input[game.K_s] and self.rectangle.bottom <= board.size[1]:
+        elif key_input[self.down] and self.rectangle.bottom <= board.size[1]:
             self.rectangle.centery += 6
 
 
@@ -112,7 +116,12 @@ while True:
     key_input = game.key.get_pressed()
 
     #//// Moving Objects
-    if key_input[game.K_w] or key_input[game.K_s]:
+    #// Moving the left paddle
+    if key_input[left_paddle.up] or key_input[left_paddle.down]:
         left_paddle.move(key_input)
+
+    #// Moving the right paddle 
+    # if key_input[right_paddle.up] or key_input[right_paddle.down]:
+    #     right_paddle.move(key_input)
 
     update_display(board, ball, left_paddle, right_paddle)
