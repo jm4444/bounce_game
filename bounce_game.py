@@ -148,6 +148,9 @@ while True:
     #// Moving the right paddle /
     if key_input[right_paddle.up] or key_input[right_paddle.down]:
         right_paddle.move(key_input)
+        ball.start_moving = True
+
+
     ball.move()
 
     update_display(board, ball, left_paddle, right_paddle)
