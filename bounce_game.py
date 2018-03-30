@@ -65,6 +65,9 @@ class Paddle:
         elif key_input[self.down] and self.rectangle.bottom <= board.size[1]:
             self.rectangle.centery += self.speed
 
+    def reset_position(self):
+        self.rectangle.centery = board.size[1] / 2
+
 
 # the Ball class is used to create and control the ball
 class Ball:
@@ -88,9 +91,7 @@ class Ball:
         if self.start_moving == True:
             self.rectangle = self.rectangle.move(self.speed)
             if self.rectangle.right < 0 or self.rectangle.left > board.size[0]:      # bouncing off left or right of screen
-                self.speed = [0, 0]
-                self.rectangle.centerx = board.size[0] / 2
-                self.rectangle.centery = board.size[1] / 2
+                reset_positions(ball, left_paddle, right_paddle)
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
                 self.speed[1] = -self.speed[1]
@@ -100,6 +101,11 @@ class Ball:
 
             if self.rectangle.colliderect(right_paddle.rectangle):      # bouncing off of the right paddle
                 self.speed[0] = -self.speed[0]
+
+    def reset_position(self):
+        self.speed = [0, 0]
+        self.rectangle.centerx = board.size[0] / 2
+        self.rectangle.centery = board.size[1] / 2
 
 
 
@@ -111,6 +117,11 @@ def update_display(board, ball, left_paddle, right_paddle):
     ball.display()
     left_paddle.display()
     right_paddle.display()
+
+def reset_positions(ball, left_paddle, right_paddle):
+    ball.reset_position()
+    left_paddle.reset_position()
+    right_paddle.reset_position()
 
 
 
