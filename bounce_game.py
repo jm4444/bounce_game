@@ -87,7 +87,7 @@ class Ball:
     def move(self):
         if self.start_moving == True:
             self.rectangle = self.rectangle.move(self.speed)
-            if self.rectangle.left < 0 or self.rectangle.right > board.size[0]:      # bouncing off left or right of screen
+            if self.rectangle.right < 0 or self.rectangle.left > board.size[0]:      # bouncing off left or right of screen
                 self.speed = [0, 0]
                 self.rectangle.centerx = board.size[0] / 2
                 self.rectangle.centery = board.size[1] / 2
