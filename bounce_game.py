@@ -13,12 +13,13 @@ project started March 16th, 2018.
 
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
-import sys, pygame as game, get_image_size
+import sys, pygame as game, get_image_size, random
 
 game.init()
 
 graphics_path = "graphics/"
 fps_clock = game.time.Clock()
+randomizer = (-1)**random.randrange(2)      # generates a negative or positive 1
 
 
 
@@ -75,6 +76,9 @@ class Ball:
         self.rectangle.centery = board.size[1] / 2
         self.start_moving = False
         self.speed = [10, 10]
+        self.speed[0] *= randomizer
+        self.speed[1] *= randomizer
+        print(self.speed)
 
     def display(self):
         board.screen.blit(self.ball, self.rectangle)
@@ -126,7 +130,6 @@ while True:
 
     for event in game.event.get():
         if event.type == game.QUIT:      # allows the player to exit the game by clicking the exit 'X' on the window
-            print("program ends")
             game.quit()
             raise SystemExit
 
@@ -149,7 +152,6 @@ while True:
     if key_input[right_paddle.up] or key_input[right_paddle.down]:
         right_paddle.move(key_input)
         ball.start_moving = True
-
 
     ball.move()
 
