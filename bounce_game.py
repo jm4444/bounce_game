@@ -52,11 +52,11 @@ class Paddle:
             self.up = game.K_UP
             self.down = game.K_DOWN
         self.rectangle.centery = board.size[1] / 2
-        self.speed = 12
+        self.speed = 9
 
     def display(self):
         board.screen.blit(self.paddle, self.rectangle)
-        game.display.update()
+        game.display.update(self.rectangle)
 
     def move(self, key_input):
         if key_input[self.up] and self.rectangle.top >= 0:
@@ -77,12 +77,12 @@ class Ball:
         self.rectangle.centerx = board.size[0] / 2
         self.rectangle.centery = board.size[1] / 2
         self.start_moving = False
-        self.speed = [10, 10]
+        self.speed = [7, 7]
         self.randomize_speed()
 
     def display(self):
         board.screen.blit(self.ball, self.rectangle)
-        game.display.update()
+        game.display.update(self.rectangle)
 
     def move(self):
         if self.start_moving == True:
@@ -152,9 +152,10 @@ while True:
 
     #//// Variables for Running the Game //
 
-    fps_clock.tick(30)      # sets the frame rate at 30fps
+    fps_clock.tick(44)      # sets the frame rate at 30fps
     game.event.pump()
     key_input = game.key.get_pressed()
+    update_display(board, ball, left_paddle, right_paddle)
 
 
     #//// Moving Objects //
@@ -170,5 +171,3 @@ while True:
         ball.start_moving = True
 
     ball.move()
-
-    update_display(board, ball, left_paddle, right_paddle)
