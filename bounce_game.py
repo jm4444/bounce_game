@@ -101,6 +101,7 @@ class Ball:
 
     def reset_position(self):
         self.rectangle.move([0, 0])
+        ball.start_moving = False
         self.randomize_speed()
         self.rectangle.centerx = board.size[0] / 2
         self.rectangle.centery = board.size[1] / 2
