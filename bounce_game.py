@@ -19,7 +19,6 @@ game.init()
 
 graphics_path = "graphics/"
 fps_clock = game.time.Clock()
-randomizer = (-1)**random.randrange(2)      # generates a negative or positive 1
 
 
 
@@ -79,9 +78,7 @@ class Ball:
         self.rectangle.centery = board.size[1] / 2
         self.start_moving = False
         self.speed = [10, 10]
-        self.speed[0] *= randomizer
-        self.speed[1] *= randomizer
-        print(self.speed)
+        self.randomize_speed()
 
     def display(self):
         board.screen.blit(self.ball, self.rectangle)
@@ -103,10 +100,15 @@ class Ball:
                 self.speed[0] = -self.speed[0]
 
     def reset_position(self):
-        self.speed = [0, 0]
+        self.rectangle.move([0, 0])
+        self.randomize_speed()
         self.rectangle.centerx = board.size[0] / 2
         self.rectangle.centery = board.size[1] / 2
 
+    def randomize_speed(self):
+        randomizer = (-1)**random.randrange(2)      # generates a 1 or -1
+        self.speed[0] *= randomizer
+        self.speed[1] *= randomizer
 
 
 
