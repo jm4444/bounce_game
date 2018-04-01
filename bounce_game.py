@@ -52,7 +52,7 @@ class Paddle:
             self.up = game.K_UP
             self.down = game.K_DOWN
         self.rectangle.centery = board.size[1] / 2
-        self.speed = 9
+        self.speed = 8
 
     def display(self):
         board.screen.blit(self.paddle, self.rectangle)
@@ -77,7 +77,7 @@ class Ball:
         self.rectangle.centerx = board.size[0] / 2
         self.rectangle.centery = board.size[1] / 2
         self.start_moving = False
-        self.speed = [7, 7]
+        self.speed = [4.5, 4.5]
         self.randomize_speed()
 
     def display(self):
@@ -87,16 +87,16 @@ class Ball:
     def move(self):
         if self.start_moving == True:
             self.rectangle = self.rectangle.move(self.speed)
-            if self.rectangle.right < 0 or self.rectangle.left > board.size[0]:      # bouncing off left or right of screen
+            if self.rectangle.right < 0 or self.rectangle.left > board.size[0]:      # going off left or right of screen
                 reset_positions(ball, left_paddle, right_paddle)
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
                 self.speed[1] = -self.speed[1]
 
-            if self.rectangle.colliderect(left_paddle.rectangle):      # bouncing off of the left paddle
+            if self.rectangle.colliderect(left_paddle.rectangle) and self.rectangle.left == 32 and self.rectangle.top > left_paddle.rectangle.top and self.rectangle.bottom < left_paddle.rectangle.bottom:      # bouncing off of the left paddle
                 self.speed[0] = -self.speed[0]
 
-            if self.rectangle.colliderect(right_paddle.rectangle):      # bouncing off of the right paddle
+            if self.rectangle.colliderect(right_paddle.rectangle) and self.rectangle.right == 791 and self.rectangle.top > right_paddle.rectangle.top and self.rectangle.bottom < right_paddle.rectangle.bottom:      # bouncing off of the right paddle
                 self.speed[0] = -self.speed[0]
 
     def reset_position(self):
@@ -152,7 +152,7 @@ while True:
 
     #//// Variables for Running the Game //
 
-    fps_clock.tick(44)      # sets the frame rate at 30fps
+    fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
     update_display(board, ball, left_paddle, right_paddle)
