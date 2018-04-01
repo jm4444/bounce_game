@@ -37,6 +37,50 @@ class Board:
         game.display.update()
 
 
+class Score:
+    def __init__(self, side_of_screen):
+        self.load_numbers()
+        self.score_count = 0
+        self.change_score()
+        if side_of_screen == "left":
+            self.rectangle.centerx = 50
+            self.rectangle.centery = 50
+
+    def load_numbers(self):
+        self.zero = game.image.load(graphics_path + "0.png")
+        self.one = game.image.load(graphics_path + "1.png")
+        self.two = game.image.load(graphics_path + "2.png")
+        self.three = game.image.load(graphics_path + "3.png")
+        self.four = game.image.load(graphics_path + "4.png")
+        self.five = game.image.load(graphics_path + "5.png")
+        self.six = game.image.load(graphics_path + "6.png")
+        self.seven = game.image.load(graphics_path + "7.png")
+
+    def change_score(self):
+        if self.score_count == 0:
+            self.current_score = self.zero
+        elif self.score_count == 1:
+            self.current_score = self.one
+        elif self.score_count == 2:
+            self.current_score = self.two
+        elif self.score_count == 3:
+            self.current_score = self.three
+        elif self.score_count == 4:
+            self.current_score = self.four
+        elif self.score_count == 5:
+            self.current_score = self.five
+        elif self.score_count == 6:
+            self.current_score = self.six
+        elif self.score_count == 7:
+            self.current_score = self.seven
+
+        self.rectangle = self.current_score.get_rect()
+
+    def display(self):
+        board.screen.blit(self.current_score, self.rectangle)
+        game.display.update()
+
+
 # the Paddle class is used to create and control the paddles
 class Paddle:
     def __init__(self, image_file, side_of_screen):
@@ -115,8 +159,9 @@ class Ball:
 
 #   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
 
-def update_display(board, ball, left_paddle, right_paddle):
+def update_display(board, score, ball, left_paddle, right_paddle):
     board.display()
+    score.display()
     ball.display()
     left_paddle.display()
     right_paddle.display()
@@ -131,10 +176,11 @@ def reset_positions(ball, left_paddle, right_paddle):
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
 
 board = Board("background.png")
+score = Score("left")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
-update_display(board, ball, left_paddle, right_paddle)
+update_display(board, score, ball, left_paddle, right_paddle)
 
 
 
@@ -155,7 +201,7 @@ while True:
     fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
-    update_display(board, ball, left_paddle, right_paddle)
+    update_display(board, score, ball, left_paddle, right_paddle)
 
 
     #//// Moving Objects //
