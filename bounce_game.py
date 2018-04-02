@@ -34,7 +34,6 @@ class Board:
 
     def display(self):
         self.screen.blit(self.background, (0, 0))
-        game.display.update()
 
 
 class Score:
@@ -44,6 +43,9 @@ class Score:
         self.change_score()
         if side_of_screen == "left":
             self.rectangle.centerx = 50
+            self.rectangle.centery = 50
+        elif side_of_screen == "right":
+            self.rectangle.centerx = board.size[0] - 50
             self.rectangle.centery = 50
 
     def load_numbers(self):
@@ -78,7 +80,6 @@ class Score:
 
     def display(self):
         board.screen.blit(self.current_score, self.rectangle)
-        game.display.update()
 
 
 # the Paddle class is used to create and control the paddles
@@ -100,7 +101,6 @@ class Paddle:
 
     def display(self):
         board.screen.blit(self.paddle, self.rectangle)
-        game.display.update(self.rectangle)
 
     def move(self, key_input):
         if key_input[self.up] and self.rectangle.top >= 0:
@@ -126,7 +126,6 @@ class Ball:
 
     def display(self):
         board.screen.blit(self.ball, self.rectangle)
-        game.display.update(self.rectangle)
 
     def move(self):
         if self.start_moving == True:
@@ -181,7 +180,7 @@ ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
 update_display(board, score, ball, left_paddle, right_paddle)
-
+game.display.update()
 
 
 #   ~   ~   ~   ~   RUNNING THE GAME   ~   ~   ~   ~   ~#
@@ -202,6 +201,7 @@ while True:
     game.event.pump()
     key_input = game.key.get_pressed()
     update_display(board, score, ball, left_paddle, right_paddle)
+    game.display.update()
 
 
     #//// Moving Objects //
