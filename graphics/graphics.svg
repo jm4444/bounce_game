@@ -174,180 +174,172 @@
        id="rect910"
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.17848086;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     <g
-       id="g926"
-       transform="matrix(1.7489715,0,0,1.7489715,-88.256398,577.84941)"
+       id="g1007"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text834"
-         y="-761.72162"
-         x="118.75299"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.38"
+         x="119.4392"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.72162"
-           x="118.75299"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.38"
+           x="119.4392"
            id="tspan832"
            sodipodi:role="line">0</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path919"
-         d="m 117.83679,-771.52386 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
+         d="m 117.83679,-771.52383 v 20.13283 h 14.2055 v -20.13283 z m 1.00247,0.94101 h 12.20055 v 18.25175 h -12.20055 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     </g>
     <g
-       id="g931"
-       transform="matrix(1.7489715,0,0,1.7489715,-86.684871,577.84941)"
+       id="g1012"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text850"
-         y="-761.72162"
-         x="127.72951"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.38"
+         x="136.7104"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.72162"
-           x="127.72951"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.38"
+           x="136.7104"
            id="tspan848"
            sodipodi:role="line">1</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path921"
-         d="m 125.31322,-771.52386 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
+         d="m 132.48438,-771.52383 v 20.13283 h 14.2055 v -20.13283 z m 1.00247,0.94101 h 12.20055 v 18.25175 h -12.20055 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     </g>
     <g
-       id="g952"
-       transform="matrix(1.7489715,0,0,1.7489715,-86.862185,577.84941)"
+       id="g1027"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text842"
-         y="-761.72717"
-         x="151.27483"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.38971"
+         x="177.71318"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.72717"
-           x="151.27483"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.38971"
+           x="177.71318"
            id="tspan840"
            sodipodi:role="line">4</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path933"
-         d="m 150.53953,-771.52385 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
+         d="m 176.42716,-771.52382 v 20.13284 h 14.2055 v -20.13284 z m 1.00248,0.94102 h 12.20054 v 18.25174 h -12.20054 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     </g>
     <g
-       id="g947"
-       transform="matrix(1.7489715,0,0,1.7489715,-85.771147,577.84941)"
+       id="g1022"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text854"
-         y="-761.72162"
-         x="142.7269"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.38"
+         x="163.85413"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.72162"
-           x="142.7269"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.38"
+           x="163.85413"
            id="tspan852"
            sodipodi:role="line">3</tspan></text>
       <path
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
-         d="m 141.54074,-771.52386 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         d="m 161.77957,-771.52383 v 20.13283 h 14.2055 v -20.13283 z m 1.00248,0.94101 h 12.20054 v 18.25175 h -12.20054 z"
          id="path935"
          inkscape:connector-curvature="0" />
     </g>
     <g
-       id="g942"
-       transform="matrix(1.7489715,0,0,1.7489715,-85.152277,577.84941)"
+       id="g1017"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text838"
-         y="-761.67151"
-         x="133.9285"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.29236"
+         x="149.08485"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.67151"
-           x="133.9285"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.29236"
+           x="149.08485"
            id="tspan836"
            sodipodi:role="line">2</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path937"
-         d="m 132.81191,-771.52385 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
+         d="m 147.13197,-771.52382 v 20.13284 h 14.20549 v -20.13284 z m 1.00247,0.94102 h 12.20055 v 18.25174 h -12.20055 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     </g>
     <g
-       id="g971"
-       transform="matrix(1.7489715,0,0,1.7489715,-88.07073,577.84941)"
+       id="g1037"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text846"
-         y="-761.77173"
-         x="169.11655"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.46765"
+         x="207.70929"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.77173"
-           x="169.11655"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.46765"
+           x="207.70929"
            id="tspan844"
            sodipodi:role="line">6</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path954"
-         d="m 167.98048,-771.52388 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
+         d="m 205.72234,-771.52387 v 20.13283 h 14.2055 v -20.13283 z m 1.00248,0.94102 h 12.20054 v 18.25174 h -12.20054 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     </g>
     <g
-       id="g966"
-       transform="matrix(1.7489715,0,0,1.7489715,-87.768251,577.84941)"
+       id="g1032"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text858"
-         y="-761.77173"
-         x="160.3905"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.46765"
+         x="192.75017"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.77173"
-           x="160.3905"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.46765"
+           x="192.75017"
            id="tspan856"
            sodipodi:role="line">5</tspan></text>
       <path
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
-         d="m 159.43256,-771.52388 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         d="m 191.07475,-771.52387 v 20.13283 h 14.2055 v -20.13283 z m 1.00248,0.94102 h 12.20054 v 18.25174 h -12.20054 z"
          id="path956"
          inkscape:connector-curvature="0" />
     </g>
     <g
-       id="g978"
-       transform="matrix(1.7489715,0,0,1.7489715,-88.256377,577.84941)"
+       id="g1042"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
          id="text862"
-         y="-761.72162"
-         x="177.70898"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.39956474px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:0.7899701;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill"
+         y="-754.38"
+         x="222.55157"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.93751335px;line-height:1.25;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic';text-align:start;text-anchor:start;opacity:0.75;fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:1.38163519;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill;"
          xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:0.7899701"
-           y="-761.72162"
-           x="177.70898"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bahnschrift;-inkscape-font-specification:Bahnschrift;fill:#ffffff;fill-opacity:1;stroke-width:1.38163519;"
+           y="-754.38"
+           x="222.55157"
            id="tspan860"
            sodipodi:role="line">7</tspan></text>
       <path
          inkscape:connector-curvature="0"
          id="path973"
-         d="m 176.4616,-771.52386 v 11.51124 h 8.1222 v -11.51124 z m 0.57318,0.53804 h 6.97584 v 10.4357 h -6.97584 z"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.48267245;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
+         d="m 220.36993,-771.52383 v 20.13283 h 14.2055 v -20.13283 z m 1.00248,0.94101 h 12.20054 v 18.25175 h -12.20054 z"
+         style="opacity:0.4;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.59315181;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0;paint-order:stroke markers fill" />
     </g>
   </g>
 </svg>
