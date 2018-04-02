@@ -128,8 +128,7 @@ class Ball:
         self.file_name = image_file
         self.ball = game.image.load(graphics_path + self.file_name)
         self.rectangle = self.ball.get_rect()
-        self.rectangle.centerx = board.size[0] / 2
-        self.rectangle.centery = board.size[1] / 2
+        self.default_position()
         self.start_moving = False
         self.speed = [4.5, 4.5]
         self.randomize_speed()
@@ -160,13 +159,16 @@ class Ball:
         self.rectangle.move([0, 0])
         ball.start_moving = False
         self.randomize_speed()
-        self.rectangle.centerx = board.size[0] / 2
-        self.rectangle.centery = board.size[1] / 2
+        self.default_position()
 
     def randomize_speed(self):
         randomizer = (-1)**random.randrange(2)      # generates a 1 or -1
         self.speed[0] *= randomizer
         self.speed[1] *= randomizer
+
+    def default_position(self):
+        self.rectangle.centerx = board.size[0] / 2
+        self.rectangle.centery = board.size[1] / 2
 
 
 
