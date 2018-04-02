@@ -38,15 +38,10 @@ class Board:
 
 class Score:
     def __init__(self, side_of_screen):
-        self.load_numbers()
+        self.side_of_screen = side_of_screen
         self.score_count = 0
+        self.load_numbers()
         self.change_score()
-        if side_of_screen == "left":
-            self.rectangle.centerx = 100
-            self.rectangle.centery = 50
-        elif side_of_screen == "right":
-            self.rectangle.centerx = board.size[0] - 100
-            self.rectangle.centery = 50
 
     def load_numbers(self):
         self.zero = game.image.load(graphics_path + "0.png")
@@ -77,8 +72,22 @@ class Score:
             self.current_score = self.seven
 
         self.rectangle = self.current_score.get_rect()
+        self.display()
+
+    def add_point(self):
+        self.score_count += 1
+        if self.score_count == 8:
+            pass
+        else:
+            self.change_score()
 
     def display(self):
+        if self.side_of_screen == "left":
+            self.rectangle.centerx = 100
+            self.rectangle.centery = 50
+        elif self.side_of_screen == "right":
+            self.rectangle.centerx = board.size[0] - 100
+            self.rectangle.centery = 50
         board.screen.blit(self.current_score, self.rectangle)
 
 
@@ -130,7 +139,11 @@ class Ball:
     def move(self):
         if self.start_moving == True:
             self.rectangle = self.rectangle.move(self.speed)
-            if self.rectangle.right < 0 or self.rectangle.left > board.size[0]:      # going off left or right of screen
+            if self.rectangle.right < 0:      # going off left of screen
+                right_score.add_point()
+                reset_positions(ball, left_paddle, right_paddle)
+            elif self.rectangle.left > board.size[0]:      # going off right of screen
+                left_score.add_point()
                 reset_positions(ball, left_paddle, right_paddle)
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
