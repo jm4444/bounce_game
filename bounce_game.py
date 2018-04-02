@@ -42,10 +42,10 @@ class Score:
         self.score_count = 0
         self.change_score()
         if side_of_screen == "left":
-            self.rectangle.centerx = 50
+            self.rectangle.centerx = 100
             self.rectangle.centery = 50
         elif side_of_screen == "right":
-            self.rectangle.centerx = board.size[0] - 50
+            self.rectangle.centerx = board.size[0] - 100
             self.rectangle.centery = 50
 
     def load_numbers(self):
@@ -158,9 +158,10 @@ class Ball:
 
 #   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
 
-def update_display(board, score, ball, left_paddle, right_paddle):
+def update_display(board, left_score, right_score, ball, left_paddle, right_paddle):
     board.display()
-    score.display()
+    left_score.display()
+    right_score.display()
     ball.display()
     left_paddle.display()
     right_paddle.display()
@@ -175,11 +176,12 @@ def reset_positions(ball, left_paddle, right_paddle):
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
 
 board = Board("background.png")
-score = Score("left")
+left_score = Score("left")
+right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
-update_display(board, score, ball, left_paddle, right_paddle)
+update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
 game.display.update()
 
 
@@ -200,7 +202,7 @@ while True:
     fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
-    update_display(board, score, ball, left_paddle, right_paddle)
+    update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
     game.display.update()
 
 
