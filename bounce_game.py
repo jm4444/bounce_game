@@ -138,11 +138,11 @@ class Ball:
             self.rectangle = self.rectangle.move(self.speed)
             if self.rectangle.right < 0:      # going off left of screen
                 right_score.add_point()
-                reset_positions(ball, left_paddle, right_paddle)
+                reset_positions()
                 # hold_game()
             elif self.rectangle.left > board.size[0]:      # going off right of screen
                 left_score.add_point()
-                reset_positions(ball, left_paddle, right_paddle)
+                reset_positions()
                 # hold_game()
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
@@ -173,7 +173,7 @@ class Ball:
 
 #   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
 
-def update_display(board, left_score, right_score, ball, left_paddle, right_paddle):
+def update_display():
     board.display()
     left_score.display()
     right_score.display()
@@ -181,11 +181,11 @@ def update_display(board, left_score, right_score, ball, left_paddle, right_padd
     left_paddle.display()
     right_paddle.display()
 
-def reset_positions(ball, left_paddle, right_paddle):
+def reset_positions():
     ball.reset_position()
     left_paddle.reset_position()
     right_paddle.reset_position()
-    update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
+    update_display()
     game.display.update()
     hold_game()
 
@@ -202,7 +202,7 @@ right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
-update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
+update_display()
 
 
 #   ~   ~   ~   ~   RUNNING THE GAME   ~   ~   ~   ~   ~#
@@ -221,7 +221,7 @@ while True:
     fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
-    update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
+    update_display()
     game.display.update()
 
 
