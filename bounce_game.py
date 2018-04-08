@@ -24,7 +24,6 @@ fps_clock = game.time.Clock()
 
 #   ~   ~   ~   ~   CLASSES   ~   ~   ~   ~   ~#
 
-# the Board class is used to create the screen and background images
 class Board:
     def __init__(self, image_file):
         self.file_name = image_file
@@ -92,7 +91,6 @@ class Score:
         board.screen.blit(self.current_score, self.rectangle)
 
 
-# the Paddle class is used to create and control the paddles
 class Paddle:
     def __init__(self, image_file, side_of_screen):
         self.file_name = image_file
@@ -122,7 +120,6 @@ class Paddle:
         self.rectangle.centery = board.size[1] / 2
 
 
-# the Ball class is used to create and control the ball
 class Ball:
     def __init__(self, image_file):
         self.file_name = image_file
@@ -142,9 +139,11 @@ class Ball:
             if self.rectangle.right < 0:      # going off left of screen
                 right_score.add_point()
                 reset_positions(ball, left_paddle, right_paddle)
+                # hold_game()
             elif self.rectangle.left > board.size[0]:      # going off right of screen
                 left_score.add_point()
                 reset_positions(ball, left_paddle, right_paddle)
+                # hold_game()
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
                 self.speed[1] = -self.speed[1]
@@ -186,7 +185,13 @@ def reset_positions(ball, left_paddle, right_paddle):
     ball.reset_position()
     left_paddle.reset_position()
     right_paddle.reset_position()
+    update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
+    game.display.update()
+    hold_game()
 
+
+def hold_game():
+    game.time.delay(1500)
 
 
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
@@ -198,7 +203,6 @@ ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
 update_display(board, left_score, right_score, ball, left_paddle, right_paddle)
-game.display.update()
 
 
 #   ~   ~   ~   ~   RUNNING THE GAME   ~   ~   ~   ~   ~#
@@ -213,8 +217,7 @@ while True:
             raise SystemExit
 
 
-    #//// Variables for Running the Game //
-
+    #// Variables for Running the Game
     fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
@@ -222,14 +225,12 @@ while True:
     game.display.update()
 
 
-    #//// Moving Objects //
-
-    #// Moving the left paddle /
+    #// Moving the left paddle
     if key_input[left_paddle.up] or key_input[left_paddle.down]:
         left_paddle.move(key_input)
         ball.start_moving = True
 
-    #// Moving the right paddle /
+    #// Moving the right paddle
     if key_input[right_paddle.up] or key_input[right_paddle.down]:
         right_paddle.move(key_input)
         ball.start_moving = True
