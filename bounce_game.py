@@ -120,6 +120,11 @@ class Paddle:
         self.rectangle.centery = board.size[1] / 2
 
 
+class ArtificialPaddle(Paddle):
+    def move(self):
+        pass
+
+
 class Ball:
     def __init__(self, image_file):
         self.file_name = image_file
