@@ -122,7 +122,17 @@ class Paddle:
 
 class ArtificialPaddle(Paddle):
     def move(self):
-        pass
+        if ball.start_moving == True:
+            if ball.speed[0] < 0:      # if the ball is moving away from the paddle
+                if self.rectangle.centery < board.size[1] / 2 and self.rectangle.bottom <= board.size[1]:      # moves the paddle down, towards the center of the screen
+                    self.rectangle.centery += self.speed
+                elif self.rectangle.centery > board.size[1] / 2 and self.rectangle.top >= 0:      # moves the paddle up, towards the center of the screen
+                    self.rectangle.centery -= self.speed
+            elif ball.speed[0] > 0:
+                if self.rectangle.centery < ball.rectangle.centery and self.rectangle.bottom <= board.size[1]:      # moves the paddle down, towards the ball
+                    self.rectangle.centery += self.speed
+                elif self.rectangle.centery > ball.rectangle.centery and self.rectangle.top >= 0:      # moves the paddle up, towards the ball
+                    self.rectangle.centery -= self.speed
 
 
 class Ball:
@@ -204,7 +214,7 @@ left_score = Score("left")
 right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
-right_paddle = Paddle("paddle.png", "right")
+right_paddle = ArtificialPaddle("paddle.png", "right")
 update_display()
 
 
@@ -234,8 +244,6 @@ while True:
         ball.start_moving = True
 
     #// Moving the right paddle
-    if key_input[right_paddle.up] or key_input[right_paddle.down]:
-        right_paddle.move(key_input)
-        ball.start_moving = True
+    right_paddle.move()
 
     ball.move()
