@@ -105,7 +105,7 @@ class Paddle:
             self.up = game.K_UP
             self.down = game.K_DOWN
         self.rectangle.centery = board.size[1] / 2
-        self.speed = 8
+        self.speed = 12
 
     def display(self):
         board.screen.blit(self.paddle, self.rectangle)
@@ -127,7 +127,7 @@ class Ball:
         self.rectangle = self.ball.get_rect()
         self.default_position()
         self.start_moving = False
-        self.speed = [4.5, 4.5]
+        self.speed = [6, 6]
         self.randomize_speed()
 
     def display(self):
@@ -139,11 +139,9 @@ class Ball:
             if self.rectangle.right < 0:      # going off left of screen
                 right_score.add_point()
                 reset_positions()
-                # hold_game()
             elif self.rectangle.left > board.size[0]:      # going off right of screen
                 left_score.add_point()
                 reset_positions()
-                # hold_game()
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
                 self.speed[1] = -self.speed[1]
