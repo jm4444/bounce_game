@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.78220882"
-     inkscape:cx="-364.3198"
-     inkscape:cy="3956.5977"
+     inkscape:zoom="0.55310516"
+     inkscape:cx="-204.96657"
+     inkscape:cy="3889.5641"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -80,9 +80,9 @@
        inkscape:export-ydpi="269.44962" />
     <g
        id="g1060"
-       transform="matrix(0.83092794,0,0,0.99535697,-18.533547,-3.4778918)"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
+       transform="matrix(0.83087272,0,0,1.0097437,-18.5396,6.3068192)"
+       inkscape:export-xdpi="95.699997"
+       inkscape:export-ydpi="95.699997">
       <path
          inkscape:export-ydpi="96"
          inkscape:export-xdpi="96"
@@ -278,7 +278,9 @@
     </g>
     <g
        id="g1108"
-       transform="translate(6.2953642e-7,0.00539656)">
+       transform="translate(6.2953642e-7,-0.9862363)"
+       inkscape:export-xdpi="95.699997"
+       inkscape:export-ydpi="95.699997">
       <g
          style="opacity:0.75"
          inkscape:export-ydpi="96"
@@ -320,7 +322,9 @@
        inkscape:export-ydpi="300" />
     <g
        id="g1140"
-       transform="translate(0,0.49769812)">
+       transform="matrix(0.99993355,0,0,1.0144539,-0.00728423,10.339917)"
+       inkscape:export-xdpi="95.699997"
+       inkscape:export-ydpi="95.699997">
       <g
          id="g1124">
         <path
