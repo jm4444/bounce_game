@@ -148,10 +148,10 @@ class Ball:
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
                 self.speed[1] = -self.speed[1]
 
-            if self.rectangle.colliderect(left_paddle.rectangle) and self.rectangle.left == 32 and self.rectangle.top > left_paddle.rectangle.top and self.rectangle.bottom < left_paddle.rectangle.bottom:      # bouncing off of the left paddle
+            if self.rectangle.colliderect(left_paddle.rectangle) and self.rectangle.left >= left_paddle.rectangle.centerx:      # bouncing off of the left paddle
                 self.speed[0] = -self.speed[0]
 
-            if self.rectangle.colliderect(right_paddle.rectangle) and self.rectangle.right == 791 and self.rectangle.top > right_paddle.rectangle.top and self.rectangle.bottom < right_paddle.rectangle.bottom:      # bouncing off of the right paddle
+            if self.rectangle.colliderect(right_paddle.rectangle) and self.rectangle.right <=right_paddle.rectangle.centerx:      # bouncing off of the right paddle
                 self.speed[0] = -self.speed[0]
 
     def reset_position(self):
