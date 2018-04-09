@@ -123,12 +123,7 @@ class Paddle:
 class ArtificialPaddle(Paddle):
     def move(self):
         if ball.start_moving == True:
-            if ball.speed[0] < 0:      # if the ball is moving away from the paddle
-                if self.rectangle.centery < board.size[1] / 2 and self.rectangle.bottom <= board.size[1]:      # moves the paddle down, towards the center of the screen
-                    self.rectangle.centery += self.speed
-                elif self.rectangle.centery > board.size[1] / 2 and self.rectangle.top >= 0:      # moves the paddle up, towards the center of the screen
-                    self.rectangle.centery -= self.speed
-            elif ball.speed[0] > 0:
+            if ball.speed[0] > 0 and ball.rectangle.centerx > board.size[0] / 2:
                 if self.rectangle.centery < ball.rectangle.centery and self.rectangle.bottom <= board.size[1]:      # moves the paddle down, towards the ball
                     self.rectangle.centery += self.speed
                 elif self.rectangle.centery > ball.rectangle.centery and self.rectangle.top >= 0:      # moves the paddle up, towards the ball
