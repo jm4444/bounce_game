@@ -35,17 +35,42 @@ class Board:
         self.screen.blit(self.background, (0, 0))
 
 
+class Button:
+    def __init__(self, image_file, position):
+        self.file_name = image_file + ".png"
+        self.highlighted_name = image_file + " highlight.png"
+        self.button = game.image.load(graphics_path + self.file_name)
+        self.highlighted = game.image.load(graphics_path + self.highlighted_name)
+        self.rectangle = self.button.get_rect()
+        self.highlighted_rectangle = self.highlighted.get_rect()
+        self.rectangle.left = 106
+        self.highlighted_rectangle.left = 106
+        if position == "top":
+            self.rectangle.centery = 225
+            self.highlighted_rectangle.centery = 225
+        elif position == "bottom":
+            self.rectangle.centery = 300
+            self.highlighted_rectangle.centery = 300
+
+    def display(self):
+        board.screen.blit(self.button, self.rectangle)
+
+
 
 #   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
 
 def update_display():
     board.display()
+    single_player_button.display()
+    two_player_button.display()
 
 
 
 #   ~   ~   ~   ~   SETTING THE MENU   ~   ~   ~   ~   ~#
 
 board = Board("menu.png")
+single_player_button = Button("single player", "top")
+two_player_button = Button("two player", "bottom")
 update_display()
 
 
