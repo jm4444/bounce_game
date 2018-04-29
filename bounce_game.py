@@ -204,7 +204,7 @@ left_score = Score("left")
 right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
-right_paddle = Paddle("paddle.png", "right")
+right_paddle = ArtificialPaddle("paddle.png", "right")
 update_display()
 
 
@@ -232,10 +232,10 @@ while True:
     if key_input[left_paddle.up] or key_input[left_paddle.down]:
         left_paddle.move(key_input)
         ball.start_moving = True
-
-    #// Moving the right paddle
-    if key_input[right_paddle.up] or key_input[right_paddle.down]:
-        right_paddle.move(key_input)
-        ball.start_moving = True
+    #
+    # #// Moving the right paddle
+    # if key_input[right_paddle.up] or key_input[right_paddle.down]:
+    right_paddle.move()
+    #     ball.start_moving = True
 
     ball.move()
