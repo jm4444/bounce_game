@@ -37,6 +37,7 @@ class Board:
 
 class Button:
     def __init__(self, image_file, position):
+        self.is_highlighted = False
         self.file_name = image_file + ".png"
         self.highlighted_name = image_file + " highlight.png"
         self.button = game.image.load(graphics_path + self.file_name)
@@ -53,7 +54,10 @@ class Button:
             self.highlighted_rectangle.centery = 300
 
     def display(self):
-        board.screen.blit(self.button, self.rectangle)
+        if self.is_highlighted == False:
+            board.screen.blit(self.button, self.rectangle)
+        elif self.is_highlighted == True:
+            board.screen.blit(self.highlighted, self.highlighted_rectangle)
 
 
 
@@ -91,3 +95,13 @@ while True:
     game.event.pump()
     update_display()
     game.display.update()
+
+    if single_player_button.rectangle.collidepoint(game.mouse.get_pos()) or single_player_button.highlighted_rectangle.collidepoint(game.mouse.get_pos()):
+        single_player_button.is_highlighted = True
+    else:
+        single_player_button.is_highlighted = False
+
+    if two_player_button.rectangle.collidepoint(game.mouse.get_pos()) or two_player_button.highlighted_rectangle.collidepoint(game.mouse.get_pos()):
+        two_player_button.is_highlighted = True
+    else:
+        two_player_button.is_highlighted = False
