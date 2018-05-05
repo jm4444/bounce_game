@@ -141,7 +141,7 @@ class Ball:
         self.rectangle = self.ball.get_rect()
         self.default_position()
         self.start_moving = False
-        self.speed = [6, 6]
+        self.speed = [7.5, 11]
         self.randomize_speed()
 
     def display(self):
@@ -230,7 +230,7 @@ while True:
 
 
     #// Variables for Running the Game
-    fps_clock.tick(60)      # sets the frame rate at 60fps
+    fps_clock.tick(40)      # sets the frame rate
     game.event.pump()
     key_input = game.key.get_pressed()
     update_display()
