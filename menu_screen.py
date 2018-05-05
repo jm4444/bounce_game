@@ -20,6 +20,7 @@ game.init()
 
 graphics_path = "graphics/"
 fps_clock = game.time.Clock()
+game_mode = None
 
 
 
@@ -101,8 +102,7 @@ while True:
         single_player_button.is_highlighted = True
         for event in game.event.get():
             if event.type == MOUSEBUTTONDOWN:
-                print("Single player mode")
-                os.system("bounce_game.py")
+                game_mode = "bounce_game.py"
                 break
     else:
         single_player_button.is_highlighted = False
@@ -111,8 +111,12 @@ while True:
         two_player_button.is_highlighted = True
         for event in game.event.get():
             if event.type == MOUSEBUTTONDOWN:
-                print("Two player mode")
-                os.system("bounce_game_two_player.py")
+                game_mode = "bounce_game_two_player.py"
                 break
     else:
         two_player_button.is_highlighted = False
+
+    if game_mode != None:
+        break
+
+os.system(game_mode)
