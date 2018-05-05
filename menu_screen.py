@@ -13,7 +13,8 @@ project started March 16th, 2018.
 
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
-import sys, pygame as game, get_image_size, random
+import sys, pygame as game, get_image_size, random, os
+from pygame.locals import *
 
 game.init()
 
@@ -98,10 +99,20 @@ while True:
 
     if single_player_button.rectangle.collidepoint(game.mouse.get_pos()) or single_player_button.highlighted_rectangle.collidepoint(game.mouse.get_pos()):
         single_player_button.is_highlighted = True
+        for event in game.event.get():
+            if event.type == MOUSEBUTTONDOWN:
+                print("Single player mode")
+                os.system("bounce_game.py")
+                break
     else:
         single_player_button.is_highlighted = False
 
     if two_player_button.rectangle.collidepoint(game.mouse.get_pos()) or two_player_button.highlighted_rectangle.collidepoint(game.mouse.get_pos()):
         two_player_button.is_highlighted = True
+        for event in game.event.get():
+            if event.type == MOUSEBUTTONDOWN:
+                print("Two player mode")
+                os.system("bounce_game_two_player.py")
+                break
     else:
         two_player_button.is_highlighted = False
