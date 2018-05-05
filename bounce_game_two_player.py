@@ -121,17 +121,8 @@ class Paddle:
 
 
 class ArtificialPaddle(Paddle):
-    def __init__(self, image_file, side_of_screen):
-        super().__init__(image_file, side_of_screen)
-        self.speed = 10
-
     def move(self):
-        if ball.start_moving == True:
-            if ball.speed[0] > 0 and ball.rectangle.centerx > board.size[0] / 3 * 2:
-                if self.rectangle.centery < ball.rectangle.centery and self.rectangle.bottom <= board.size[1]:      # moves the paddle down, towards the ball
-                    self.rectangle.centery += self.speed
-                elif self.rectangle.centery > ball.rectangle.centery and self.rectangle.top >= 0:      # moves the paddle up, towards the ball
-                    self.rectangle.centery -= self.speed
+        pass
 
 
 class Ball:
@@ -141,7 +132,7 @@ class Ball:
         self.rectangle = self.ball.get_rect()
         self.default_position()
         self.start_moving = False
-        self.speed = [7.5, 11]
+        self.speed = [6, 6]
         self.randomize_speed()
 
     def display(self):
@@ -213,7 +204,7 @@ left_score = Score("left")
 right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
-right_paddle = ArtificialPaddle("paddle.png", "right")
+right_paddle = Paddle("paddle.png", "right")
 update_display()
 
 
@@ -230,7 +221,7 @@ while True:
 
 
     #// Variables for Running the Game
-    fps_clock.tick(40)      # sets the frame rate
+    fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
     update_display()
@@ -242,5 +233,9 @@ while True:
         left_paddle.move(key_input)
         ball.start_moving = True
 
-    right_paddle.move()
+    #// Moving the right paddle
+    if key_input[right_paddle.up] or key_input[right_paddle.down]:
+        right_paddle.move(key_input)
+        ball.start_moving = True
+
     ball.move()
