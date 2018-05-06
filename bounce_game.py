@@ -27,7 +27,7 @@ fps_clock = game.time.Clock()
 class Board:
     def __init__(self, image_file):
         self.file_name = image_file
-        self.background = game.image.load(graphics_path + self.file_name)
+        self.background = load_image(self.file_name)
         self.size = width, height = get_image_size.get_image_size(graphics_path + self.file_name)
         self.screen = game.display.set_mode(self.size)
 
@@ -43,14 +43,14 @@ class Score:
         self.change_score()
 
     def load_numbers(self):
-        self.zero = game.image.load(graphics_path + "0.png")
-        self.one = game.image.load(graphics_path + "1.png")
-        self.two = game.image.load(graphics_path + "2.png")
-        self.three = game.image.load(graphics_path + "3.png")
-        self.four = game.image.load(graphics_path + "4.png")
-        self.five = game.image.load(graphics_path + "5.png")
-        self.six = game.image.load(graphics_path + "6.png")
-        self.seven = game.image.load(graphics_path + "7.png")
+        self.zero = load_image("0.png")
+        self.one = load_image("1.png")
+        self.two = load_image("2.png")
+        self.three = load_image("3.png")
+        self.four = load_image("4.png")
+        self.five = load_image("5.png")
+        self.six = load_image("6.png")
+        self.seven = load_image("7.png")
 
     def change_score(self):
         if self.score_count == 0:
@@ -94,7 +94,7 @@ class Score:
 class Paddle:
     def __init__(self, image_file, side_of_screen):
         self.file_name = image_file
-        self.paddle = game.image.load(graphics_path + self.file_name)
+        self.paddle = load_image(self.file_name)
         self.rectangle = self.paddle.get_rect()
         if side_of_screen == "left":
             self.rectangle.centerx = 30
@@ -137,7 +137,7 @@ class ArtificialPaddle(Paddle):
 class Ball:
     def __init__(self, image_file):
         self.file_name = image_file
-        self.ball = game.image.load(graphics_path + self.file_name)
+        self.ball = load_image(self.file_name)
         self.rectangle = self.ball.get_rect()
         self.default_position()
         self.start_moving = False
@@ -205,6 +205,8 @@ def reset_positions():
 def hold_game():
     game.time.delay(1500)
 
+def load_image(file_name):
+    return game.image.load(graphics_path + file_name)
 
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
 
