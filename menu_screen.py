@@ -13,7 +13,7 @@ project started March 16th, 2018.
 
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
-import sys, pygame as game, get_image_size as image, random, os
+import pygame as game, get_image_size as image
 from pygame.locals import *
 from functions import load_image
 
@@ -81,6 +81,7 @@ two_player_button = Button("two player", "bottom")
 update_display()
 
 
+
 #   ~   ~   ~   ~   RUNNING THE MENU   ~   ~   ~   ~   ~#
 
 while True:
@@ -119,5 +120,7 @@ while True:
 
     if game_mode != None:
         break
+
+
 
 game.quit()
