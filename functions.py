@@ -14,7 +14,6 @@ project started March 16th, 2018.
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
 import pygame as game
-from functions import *
 
 graphics_path = "graphics/"
 

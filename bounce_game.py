@@ -15,6 +15,7 @@ project started March 16th, 2018.
 
 import sys, pygame as game, get_image_size as image, random
 from functions import *
+from menu_screen import game_mode
 
 game.init()
 
@@ -191,7 +192,10 @@ left_score = Score("left")
 right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
-right_paddle = ArtificialPaddle("paddle.png", "right")
+if game_mode == "single player":
+    right_paddle = ArtificialPaddle("paddle.png", "right")
+elif game_mode == "two player":
+    right_paddle = Paddle("paddle.png", "right")
 objects = [board, left_score, right_score, ball, left_paddle, right_paddle]
 moving_objects = [ball, left_paddle, right_paddle]
 update_display(objects)
@@ -223,5 +227,11 @@ while True:
         left_paddle.move(key_input)
         ball.start_moving = True
 
-    right_paddle.move()
+    if game_mode == "single player":
+        right_paddle.move()
+    elif game_mode == "two player":
+        if key_input[right_paddle.up] or key_input[right_paddle.down]:
+            right_paddle.move(key_input)
+            ball.start_moving = True
+
     ball.move()

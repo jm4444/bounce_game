@@ -80,7 +80,7 @@ two_player_button = Button("two player", "bottom")
 update_display()
 
 
-#   ~   ~   ~   ~   RUNNING THE GAME   ~   ~   ~   ~   ~#
+#   ~   ~   ~   ~   RUNNING THE MENU   ~   ~   ~   ~   ~#
 
 while True:
 
@@ -102,7 +102,7 @@ while True:
         single_player_button.is_highlighted = True
         for event in game.event.get():
             if event.type == MOUSEBUTTONDOWN:
-                game_mode = "bounce_game.py"
+                game_mode = "single player"
                 break
     else:
         single_player_button.is_highlighted = False
@@ -111,7 +111,7 @@ while True:
         two_player_button.is_highlighted = True
         for event in game.event.get():
             if event.type == MOUSEBUTTONDOWN:
-                game_mode = "bounce_game_two_player.py"
+                game_mode = "two player"
                 break
     else:
         two_player_button.is_highlighted = False
@@ -119,4 +119,4 @@ while True:
     if game_mode != None:
         break
 
-os.system(game_mode)
+game.quit()
