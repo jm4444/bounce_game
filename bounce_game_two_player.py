@@ -14,6 +14,7 @@ project started March 16th, 2018.
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
 import sys, pygame as game, get_image_size as image, random
+from functions import *
 
 game.init()
 
@@ -143,10 +144,10 @@ class Ball:
             self.rectangle = self.rectangle.move(self.speed)
             if self.rectangle.right < 0:      # going off left of screen
                 right_score.add_point()
-                reset_positions()
+                reset_positions(moving_objects, objects)
             elif self.rectangle.left > board.size[0]:      # going off right of screen
                 left_score.add_point()
-                reset_positions()
+                reset_positions(moving_objects, objects)
 
             if self.rectangle.top < 0 or self.rectangle.bottom > board.size[1]:      # bouncing off top or bottom of screen
                 self.speed[1] = -self.speed[1]
@@ -174,33 +175,6 @@ class Ball:
 
 
 
-#   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
-
-def update_display():
-    board.display()
-    left_score.display()
-    right_score.display()
-    ball.display()
-    left_paddle.display()
-    right_paddle.display()
-
-def reset_positions():
-    ball.reset_position()
-    left_paddle.reset_position()
-    right_paddle.reset_position()
-    update_display()
-    game.display.update()
-    hold_game()
-
-
-def hold_game():
-    game.time.delay(1500)
-
-def load_image(file_name):
-    return game.image.load(graphics_path + file_name)
-
-
-
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
 
 board = Board("background.png")
@@ -209,7 +183,10 @@ right_score = Score("right")
 ball = Ball("ball.png")
 left_paddle = Paddle("paddle.png", "left")
 right_paddle = Paddle("paddle.png", "right")
-update_display()
+objects = [board, left_score, right_score, ball, left_paddle, right_paddle]
+moving_objects = [ball, left_paddle, right_paddle]
+update_display(objects)
+
 
 
 #   ~   ~   ~   ~   RUNNING THE GAME   ~   ~   ~   ~   ~#
@@ -228,7 +205,7 @@ while True:
     fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
     key_input = game.key.get_pressed()
-    update_display()
+    update_display(objects)
     game.display.update()
 
 
