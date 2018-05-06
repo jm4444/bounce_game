@@ -13,7 +13,7 @@ project started March 16th, 2018.
 
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
-import sys, pygame as game, get_image_size, random
+import sys, pygame as game, get_image_size as image, random
 
 game.init()
 
@@ -28,7 +28,7 @@ class Board:
     def __init__(self, image_file):
         self.file_name = image_file
         self.background = load_image(self.file_name)
-        self.size = width, height = get_image_size.get_image_size(graphics_path + self.file_name)
+        self.size = width, height = image.get_image_size(graphics_path + self.file_name)
         self.screen = game.display.set_mode(self.size)
 
     def display(self):
@@ -207,6 +207,8 @@ def hold_game():
 
 def load_image(file_name):
     return game.image.load(graphics_path + file_name)
+
+
 
 #   ~   ~   ~   ~   SETTING THE BOARD   ~   ~   ~   ~   ~#
 
