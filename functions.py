@@ -13,10 +13,8 @@ project started March 16th, 2018.
 
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
-import sys, pygame as game, get_image_size as image, random
+import pygame as game
 from functions import *
-
-game.init()
 
 graphics_path = "graphics/"
 
