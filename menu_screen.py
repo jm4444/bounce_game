@@ -13,8 +13,9 @@ project started March 16th, 2018.
 
 #   ~   ~   ~   ~   MODULES & SET UP   ~   ~   ~   ~   ~#
 
-import sys, pygame as game, get_image_size, random, os
+import sys, pygame as game, get_image_size as image, random, os
 from pygame.locals import *
+from functions import load_image
 
 game.init()
 
@@ -29,8 +30,8 @@ game_mode = None
 class Board:
     def __init__(self, image_file):
         self.file_name = image_file
-        self.background = game.image.load(graphics_path + self.file_name)
-        self.size = width, height = get_image_size.get_image_size(graphics_path + self.file_name)
+        self.background = load_image(self.file_name)
+        self.size = width, height = image.get_image_size(graphics_path + self.file_name)
         self.screen = game.display.set_mode(self.size)
 
     def display(self):
@@ -42,8 +43,8 @@ class Button:
         self.is_highlighted = False
         self.file_name = image_file + ".png"
         self.highlighted_name = image_file + " highlight.png"
-        self.button = game.image.load(graphics_path + self.file_name)
-        self.highlighted = game.image.load(graphics_path + self.highlighted_name)
+        self.button = load_image(self.file_name)
+        self.highlighted = load_image(self.highlighted_name)
         self.rectangle = self.button.get_rect()
         self.highlighted_rectangle = self.highlighted.get_rect()
         self.rectangle.left = 106
