@@ -15,7 +15,7 @@ project started March 16th, 2018.
 
 import pygame as game, get_image_size as image
 from pygame.locals import *
-from functions import load_image
+from functions import *
 
 game.init()
 
@@ -64,21 +64,13 @@ class Button:
 
 
 
-#   ~   ~   ~   ~   FUNCTIONS   ~   ~   ~   ~   ~#
-
-def update_display():
-    board.display()
-    single_player_button.display()
-    two_player_button.display()
-
-
-
 #   ~   ~   ~   ~   SETTING THE MENU   ~   ~   ~   ~   ~#
 
 board = Board("menu.png")
 single_player_button = Button("single player", "top")
 two_player_button = Button("two player", "bottom")
-update_display()
+objects = [board, single_player_button, two_player_button]
+update_display(objects)
 
 
 
@@ -97,7 +89,7 @@ while True:
     #// Variables for Running the Game
     fps_clock.tick(60)      # sets the frame rate at 60fps
     game.event.pump()
-    update_display()
+    update_display(objects)
     game.display.update()
 
     if single_player_button.rectangle.collidepoint(game.mouse.get_pos()) or single_player_button.highlighted_rectangle.collidepoint(game.mouse.get_pos()):
