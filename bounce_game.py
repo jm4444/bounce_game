@@ -42,37 +42,10 @@ class Score:
     def __init__(self, side_of_screen):
         self.side_of_screen = side_of_screen
         self.score_count = 0
-        self.load_numbers()
         self.change_score()
 
-    def load_numbers(self):
-        self.zero = load_image("0.png")
-        self.one = load_image("1.png")
-        self.two = load_image("2.png")
-        self.three = load_image("3.png")
-        self.four = load_image("4.png")
-        self.five = load_image("5.png")
-        self.six = load_image("6.png")
-        self.seven = load_image("7.png")
-
     def change_score(self):
-        if self.score_count == 0:
-            self.current_score = self.zero
-        elif self.score_count == 1:
-            self.current_score = self.one
-        elif self.score_count == 2:
-            self.current_score = self.two
-        elif self.score_count == 3:
-            self.current_score = self.three
-        elif self.score_count == 4:
-            self.current_score = self.four
-        elif self.score_count == 5:
-            self.current_score = self.five
-        elif self.score_count == 6:
-            self.current_score = self.six
-        elif self.score_count == 7:
-            self.current_score = self.seven
-
+        self.current_score = load_image(str(self.score_count) + ".png")
         self.rectangle = self.current_score.get_rect()
         self.display()
 
