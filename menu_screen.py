@@ -78,8 +78,7 @@ update_display(objects)
 
 while True:
 
-    #//// Check for Specific Events //
-
+    #// Check for Specific Events
     for event in game.event.get():
         if event.type == game.QUIT:      # allows the player to exit the game by clicking the exit 'X' on the window
             game.quit()
@@ -114,5 +113,7 @@ while True:
         break
 
 
+
+#   ~   ~   ~   ~   EXITING THE MENU   ~   ~   ~   ~   ~#
 
 game.quit()

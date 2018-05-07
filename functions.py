@@ -32,7 +32,6 @@ def reset_positions(moving_objects, objects):
     game.display.update()
     hold_game()
 
-
 def hold_game():
     game.time.delay(1500)
 
