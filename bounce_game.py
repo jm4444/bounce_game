@@ -61,12 +61,11 @@ class Score:
 
     def display(self):
         screen_quarter = board.size[0] / 4
+        self.rectangle.centery = 75
         if self.side_of_screen == "left":
             self.rectangle.centerx = screen_quarter
-            self.rectangle.centery = 75
         elif self.side_of_screen == "right":
             self.rectangle.centerx = screen_quarter * 3
-            self.rectangle.centery = 75
         board.screen.blit(self.current_score, self.rectangle)
 
 
