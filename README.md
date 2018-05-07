@@ -1,6 +1,6 @@
 # bounce_game
-_  __  ___b o u n c e___  __  _
-        a Pong knock off
+## _  __  __\_b o u n c e\___  __  _
+###        a Pong knock off
 
-by Justin Meredith.
-project started March 16th, 2018.
+###### by Justin Meredith.
+###### project started March 16th, 2018.
