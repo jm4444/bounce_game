@@ -21,6 +21,7 @@ game.init()
 
 graphics_path = "graphics/"
 fps_clock = game.time.Clock()
+winner = None
 
 
 
@@ -77,10 +78,13 @@ class Score:
 
     def add_point(self):
         self.score_count += 1
-        if self.score_count == 8:
-            pass
-        else:
-            self.change_score()
+        self.change_score()
+        if self.score_count == 7:
+            global winner
+            if self.side_of_screen == "left":
+                winner = "player one"
+            elif self.side_of_screen == "right":
+                winner = "player two"
 
     def display(self):
         screen_quarter = board.size[0] / 4
@@ -234,3 +238,12 @@ while True:
             ball.start_moving = True
 
     ball.move()
+
+    if winner != None:
+        break
+
+
+
+#   ~   ~   ~   ~   ENDING THE GAME   ~   ~   ~   ~   ~#
+
+print(winner)
