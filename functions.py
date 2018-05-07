@@ -33,7 +33,7 @@ def reset_positions(moving_objects, objects):
     hold_game()
 
 def hold_game():
-    game.time.delay(1500)
+    game.time.delay(1000)
 
 def load_image(file_name):
     return game.image.load(graphics_path + file_name)
