@@ -41,26 +41,37 @@ class Board:
 class Button:
     def __init__(self, image_file, position):
         self.is_highlighted = False
+        #// Naming attributes
         self.file_name = image_file + ".png"
         self.highlighted_name = image_file + " highlight.png"
+        self.explanation_name = image_file + " explanation.png"
+        #// Loading attributes
         self.button = load_image(self.file_name)
         self.highlighted = load_image(self.highlighted_name)
+        self.explanation = load_image(self.explanation_name)
+        #// Positioning attributes
         self.rectangle = self.button.get_rect()
         self.highlighted_rectangle = self.highlighted.get_rect()
+        self.explanation_rectangle = self.explanation.get_rect()
         self.rectangle.left = 106
         self.highlighted_rectangle.left = 106
+        # self.explanation_rectangle.left = 365
+        # self.explanation_rectangle.top = 211
+        self.explanation_rectangle.top = 349
+        self.explanation_rectangle.left = 122
         if position == "top":
-            self.rectangle.centery = 225
-            self.highlighted_rectangle.centery = 225
+            self.rectangle.top = 199
+            self.highlighted_rectangle.top = 199
         elif position == "bottom":
-            self.rectangle.centery = 300
-            self.highlighted_rectangle.centery = 300
+            self.rectangle.top = 274
+            self.highlighted_rectangle.top = 274
 
     def display(self):
         if self.is_highlighted == False:
             board.screen.blit(self.button, self.rectangle)
         elif self.is_highlighted == True:
             board.screen.blit(self.highlighted, self.highlighted_rectangle)
+            board.screen.blit(self.explanation, self.explanation_rectangle)
 
 
 
