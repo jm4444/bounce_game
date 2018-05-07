@@ -1,5 +1,4 @@
-## _  __  __\_b o u n c e\___  __  _
----
+## \_  \_\_  \_\_\_b o u n c e\_\_\_  \_\_  \_
 ###        a Pong knock off
 
 by Justin Meredith.
