@@ -55,8 +55,6 @@ class Button:
         self.explanation_rectangle = self.explanation.get_rect()
         self.rectangle.left = 106
         self.highlighted_rectangle.left = 106
-        # self.explanation_rectangle.left = 365
-        # self.explanation_rectangle.top = 211
         self.explanation_rectangle.top = 349
         self.explanation_rectangle.left = 122
         if position == "top":
