@@ -38,6 +38,18 @@ class Board:
         self.screen.blit(self.background, (0, 0))
 
 
+class Image:
+    def __init__(self, image_file):
+        self.file_name = image_file
+        self.image = load_image(self.file_name)
+        self.rectangle = self.image.get_rect()
+        self.rectangle.centerx = board.size[0] / 2
+        self.rectangle.centery = board.size[1] / 2
+
+    def display(self):
+        board.screen.blit(self.image, self.rectangle)
+
+
 class Score:
     def __init__(self, side_of_screen):
         self.side_of_screen = side_of_screen
@@ -218,4 +230,9 @@ while True:
 
 #   ~   ~   ~   ~   ENDING THE GAME   ~   ~   ~   ~   ~#
 
-print(winner)
+winner_image = Image(winner + " wins.png")
+objects.append(winner_image)
+update_display(objects)
+game.display.update()
+
+input()
